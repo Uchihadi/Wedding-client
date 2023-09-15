@@ -22,14 +22,17 @@ function Guestbook() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (name, wishes
-      // , attendingValue, email
-      ) {
+    if (name, wishes, attendingValue, email)
+      {
       await addDoc(collection (db, "wedding"), {
         Name: name,
+        Email: email,
+        Attending: attendingValue,
         Wishes: wishes,
       })
     }
+
+    alert ("Form has been submitted!")
 
     const body= {
         name: name,

@@ -1,6 +1,9 @@
 import axios from "axios";
 import "./App.css";
 import { useState } from 'react';
+import { db } from "./firebase";
+import { useEffect } from "react";
+import { addDoc, collection, onSnapshot } from "firebase/firestore";
 
 function Guestbook() {
   const [name, setName] = useState("");
@@ -19,6 +22,14 @@ function Guestbook() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (name, wishes
+      // , attendingValue, email
+      ) {
+      await addDoc(collection (db, "wedding"), {
+        Name: name,
+        Wishes: wishes,
+      })
+    }
 
     const body= {
         name: name,

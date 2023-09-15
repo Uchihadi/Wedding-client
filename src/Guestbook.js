@@ -34,24 +34,24 @@ function Guestbook() {
 
     alert ("Form has been submitted!")
 
-    const body= {
-        name: name,
-        wishes: wishes,
-        attendingValue: attendingValue,
-        email: email
-      }
-    
     setName ('');
     setEmail ('');
     setWishes ('');
     setAttendingValue(1);
 
-  try {
-    const {data} =await axios.post("http://localhost:5000/success",body)
-    return data;
-  } catch (e) {
-    return e;
-  }
+    // const body= {
+    //     name: name,
+    //     wishes: wishes,
+    //     attendingValue: attendingValue,
+    //     email: email
+    //   }
+
+  // try {
+  //   const {data} =await axios.post("http://localhost:5000/success",body)
+  //   return data;
+  // } catch (e) {
+  //   return e;
+  // }
 
 };
 
